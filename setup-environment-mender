@@ -67,4 +67,7 @@ cat ${mender_community_dir}/templates/local.conf.append >> ${build_dir}/conf/loc
 cp ${script_dir}/sources/base/templates/bblayers-mender.conf.sample ${build_dir}/conf/bblayers.conf
 cat ${target_templates}/local.conf.append >> ${build_dir}/conf/local.conf
 
+# Additions from meta-boundary:
+cat ${script_dir}/sources/meta-boundary/dynamic-layers/mender-nxp-layer/templates/local.conf.append >> ${build_dir}/conf/local.conf
+
 touch ${build_dir}/conf/mender_append_complete
